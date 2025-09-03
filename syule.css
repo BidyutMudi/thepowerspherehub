@@ -1,0 +1,126 @@
+<section class="videos">
+  <h2>🎥 Latest Videos</h2>
+  <div class="video-grid">
+    <div class="video-card">
+      <a href="https://www.youtube.com/watch?v=KTYbjLAqtB4" target="_blank">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/KTYbjLAqtB4/maxresdefault.jpg" alt="Video 1">
+          <div class="overlay"><span>▶ Watch</span></div>
+        </div>
+      </a>
+      <p><b>THE MONEY TRAP | Life Lessons</b></p>
+    </div>
+
+    <div class="video-card">
+      <a href="https://www.youtube.com/watch?v=YFURWwIVw8U" target="_blank">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/YFURWwIVw8U/maxresdefault.jpg" alt="Video 2">
+          <div class="overlay"><span>▶ Watch</span></div>
+        </div>
+      </a>
+      <p><b>Motivation & Self Growth</b></p>
+    </div>
+
+    <div class="video-card">
+      <a href="https://www.youtube.com/watch?v=0SmVFjBJt28" target="_blank">
+        <div class="thumbnail">
+          <img src="https://img.youtube.com/vi/0SmVFjBJt28/maxresdefault.jpg" alt="Video 3">
+          <div class="overlay"><span>▶ Watch</span></div>
+        </div>
+      </a>
+      <p><b>Law 3: Conceal Your Intentions</b></p>
+    </div>
+  </div>
+</section>
+
+<style>
+.videos {
+  margin: 60px 40px;
+  text-align: center;
+}
+.videos h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #fff;
+  animation: glowText 3s infinite alternate;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.video-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+}
+
+.video-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+}
+
+.video-card img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.video-card:hover img {
+  transform: scale(1.05);
+}
+
+.video-card p {
+  padding: 12px;
+  font-size: 15px;
+  color: #ddd;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.video-card:hover p {
+  color: #ffcc00;
+}
+
+/* Overlay for play button */
+.thumbnail {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.overlay span {
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 0 0 10px #ff0080,0 0 15px #7928ca;
+}
+
+.thumbnail:hover .overlay {
+  opacity: 1;
+}
+
+/* Animations */
+@keyframes glowText {
+  from { text-shadow: 0 0 5px #ff0080, 0 0 10px #7928ca; }
+  to { text-shadow: 0 0 20px #2af598, 0 0 40px #ff0080; }
+}
+</style>

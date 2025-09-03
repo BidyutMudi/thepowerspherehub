@@ -1,0 +1,100 @@
+/* ================= Video Section Dark Style ================= */
+.videos-dark {
+  margin: 60px 40px;
+  text-align: center;
+  background: #0b0b14; /* dark background */
+  padding: 40px 0;
+  border-radius: 20px;
+}
+.videos-dark h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #fff;
+  text-shadow: 0 0 10px #ff0080,0 0 20px #7928ca;
+  animation: glowText 3s infinite alternate;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.video-card {
+  background: rgba(20,20,35,0.9);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.video-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+}
+
+.video-card img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.video-card:hover img {
+  transform: scale(1.06);
+}
+
+/* Overlay with dark gradient */
+.thumbnail {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.overlay span {
+  font-size: 2rem;
+  color: #ffcc00;
+  text-shadow: 0 0 10px #ff0080, 0 0 20px #7928ca;
+}
+
+.thumbnail:hover .overlay {
+  opacity: 1;
+}
+
+/* Video title with gradient + glow */
+.video-title {
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff0080, #7928ca, #2af598);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 8px rgba(255,255,255,0.3);
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.video-card:hover .video-title {
+  transform: scale(1.05);
+  text-shadow: 0 0 12px #ff0080, 0 0 20px #2af598;
+}
+
+/* Animations */
+@keyframes glowText {
+  from { text-shadow: 0 0 5px #ff0080, 0 0 15px #7928ca; }
+  to { text-shadow: 0 0 25px #2af598, 0 0 40px #ff0080; }
+}

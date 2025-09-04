@@ -4,91 +4,97 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>The PowerSphere Hub</title>
-  <meta name="The PowerSphere Hub" content="The PowerSphere Hub" />
+  <meto more ultra a name="The PowerSphere Hub" content="The PowerSphere Hub" />
 
-<section class="hero-header">
-  <div class="hero-content">
-    <!-- Logo -->
-    <img src="Google_AI_Studio_2025-09-02T12_23_39.941Z.png" alt="PowerSphere Hub Logo" class="logo">
-
-    <!-- Channel Name -->
-    <h1>The PowerSphere Hub</h1>
-
-    <!-- Subscribe Button -->
-    <a href="https://youtube.com/@the_powersphere_hub?si=ceMmvhtWLtVU9daW" target="_blank" class="subscribe-btn">
-      Subscribe Now
-    </a>
+<section class="hero-intro">
+  <div class="intro-content">
+    <h1>⚡ Welcome to <span>The PowerSphere Hub</span></h1>
+    <p>Unlock powerful ideas, life-changing wisdom, and modern influence strategies.  
+    Motivation, 48 Laws of Power, psychology, and success stories—all in one place.</p>
+    <a href="https://youtube.com/@the_powersphere_hub?si=ceMmvhtWLtVU9daW" target="_blank" class="subscribe-btn">Subscribe Now</a>
   </div>
 </section>
 
 <style>
-.hero-header {
+.hero-intro {
+  height: 100vh;
+  background: linear-gradient(135deg,#0b0b14,#1c1c2e,#2a2a40);
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
-  height: 35vh; /* compact */
-  background: linear-gradient(135deg,#0d0d1a,#2a003f);
+  align-items: center;
   text-align: center;
-  padding: 20px;
+  position: relative;
   overflow: hidden;
 }
 
-.hero-header .logo {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin-bottom: 15px;
-  box-shadow: 0 0 20px rgba(255,0,200,0.5);
-  animation: logoGlow 3s infinite alternate;
+.hero-intro::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 50% 50%, rgba(255,0,200,0.2), transparent 70%);
+  animation: rotate-bg 20s linear infinite;
+  top: -50%;
+  left: -50%;
+  z-index: 0;
 }
 
-.hero-header h1 {
-  font-size: 2rem;
+@keyframes rotate-bg {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.intro-content {
+  position: relative;
+  z-index: 1;
   color: #fff;
-  margin-bottom: 15px;
-  background: linear-gradient(90deg,#ff0080,#7928ca,#2af598);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: glowText 3s infinite alternate;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.intro-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: glow-text 2s infinite alternate;
+}
+
+.intro-content h1 span {
+  color: #ff0080;
+  text-shadow: 0 0 15px #ff0080, 0 0 30px #7928ca, 0 0 45px #2af598;
+}
+
+.intro-content p {
+  font-size: 1.2rem;
+  margin-bottom: 35px;
+  color: #ddd;
+  line-height: 1.6;
 }
 
 .subscribe-btn {
-  padding: 14px 35px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border-radius: 50px;
-  background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
+  padding: 15px 40px;
+  background: linear-gradient(90deg,#ff0080,#7928ca,#2af598);
   color: #fff;
+  font-weight: bold;
   text-decoration: none;
-  box-shadow: 0 0 25px rgba(255,0,200,0.5);
-  animation: bounce 2s infinite, glow 3s infinite alternate;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  box-shadow: 0 0 20px rgba(255,0,200,0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .subscribe-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 45px rgba(255,0,200,0.8);
+  transform: scale(1.1);
+  box-shadow: 0 0 40px rgba(255,0,200,0.8);
 }
 
-/* Animations */
-@keyframes glowText {
-  from { text-shadow: 0 0 10px #ff0080,0 0 20px #7928ca; }
-  to { text-shadow: 0 0 25px #2af598,0 0 40px #ff0080; }
-}
-@keyframes logoGlow {
-  from { box-shadow: 0 0 15px rgba(255,0,200,0.5); }
-  to { box-shadow: 0 0 35px rgba(255,0,200,0.8); }
-}
-@keyframes bounce {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-}
-@keyframes glow {
-  from { box-shadow: 0 0 15px rgba(255,0,200,0.5); }
-  to { box-shadow: 0 0 35px rgba(255,0,200,0.8); }
+/* Text glow animation */
+@keyframes glow-text {
+  0% { text-shadow: 0 0 10px #ff0080, 0 0 20px #7928ca, 0 0 30px #2af598; }
+  50% { text-shadow: 0 0 20px #ff0080, 0 0 40px #7928ca, 0 0 60px #2af598; }
+  100% { text-shadow: 0 0 10px #ff0080, 0 0 20px #7928ca, 0 0 30px #2af598; }
 }
 </style>
+
 
 <section class="videos">
   <!-- Example Video Card -->
